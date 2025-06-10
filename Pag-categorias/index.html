@@ -74,42 +74,33 @@
             <p>Voltar</p>
         </a>
     </div>
-    
-    
-        <!-- Aside -->
-        <aside>
-            <div>
-                <ul>
-                    <li><a href="">Minha conta</a></li>
-                    <li><a href="">Rolês</a></li>
-                    <li><a href="">Categorias</a></li>
-                    <li><a href="">Usúarios</a></li>
-                    <li><a href="">Parceiros</a></li>
-                    <li><a href="">Dashboard</a></li>
-                </ul>
-            </div>
-        </aside>
 
-        <div class="w-xl flex flex-col justify-center items-center">
+    <div class="w-full flex justify-between items-center">
+        <div class="order-2 w-full">
             <!-- Titulo da página -->
-            <div class="">
-                <h1>Categorias</h1>
+            <div class="flex flex-col justify-center items-center">
+                <h1 class="font-semibold text-3xl">Categorias</h1>
                 <p>Todas as categorias de rolês</p>
             </div>
 
-            <main>
+            <main class="flex flex-col justify-center items-center">
                 <!-- Pesquisar, filtrar e criar categorias -->
-                <div>
-                    <input type="text" value="">
-                    <input type="button" value="">
-                    <input type="button" value="">
+                <div class="w-5xl flex pb-5 pt-5 gap-10">
+                    <label for="Cat-Pesquisa"><i class="fa-solid fa-magnifying-glass bg-[#272032]"></i></label>
+                    <input type="search" id="Cat-Pesquisa" placeholder="Pesquisar uma categoria de rolê..." class="w-sm rounded-full px-3">
+
+                    <label class="border rounded-full px-5 py-1" for="Cat-filtro">Filtrar categorias <i></i></label>
+                    <input type="button" id="Cat-filtro">
+
+                    <label class="bg-[#DB2763] rounded-full px-5 py-1" for="Cat-Criar">Criar categoria <i></i></label>
+                    <input type="button" id="Cat-Criar">
                 </div>
 
                 <!-- Tabela de todas as categorias -->
                 <div>
-                    <table class="border">
+                    <table class="border w-5xl h-[400px] table-auto">
                         <thead>
-                            <tr>
+                            <tr class="border h-[50px]">
                                 <th>Nome da categoria</th>
                                 <th>Rolês</th>
                                 <th>Parceiros</th>
@@ -119,7 +110,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr class="border">
                                 <th>Bar/Pub</th>
                                 <th>68</th>
                                 <th>12</th>
@@ -128,7 +119,7 @@
                                 <th>*** | <i>a</i></th>
                             </tr>
 
-                            <tr>
+                            <tr class="border">
                                 <th>Bar/Pub</th>
                                 <th>68</th>
                                 <th>12</th>
@@ -136,7 +127,7 @@
                                 <th>19/07/2025</th>
                                 <th>*** | <i>a</i></th>
                             </tr>
-                            <tr>
+                            <tr class="border">
                                 <th>Bar/Pub</th>
                                 <th>68</th>
                                 <th>12</th>
@@ -144,7 +135,7 @@
                                 <th>19/07/2025</th>
                                 <th>*** | <i>a</i></th>
                             </tr>
-                            <tr>
+                            <tr class="border">
                                 <th>Bar/Pub</th>
                                 <th>68</th>
                                 <th>12</th>
@@ -152,7 +143,7 @@
                                 <th>19/07/2025</th>
                                 <th>*** | <i>a</i></th>
                             </tr>
-                            <tr>
+                            <tr class="border">
                                 <th>Bar/Pub</th>
                                 <th>68</th>
                                 <th>12</th>
@@ -176,8 +167,22 @@
             </main>
         </div>
 
-   
 
+
+        <!-- Aside -->
+        <aside class="order-1">
+            <div>
+                <ul>
+                    <li><a href="">Minha conta</a></li>
+                    <li><a href="">Rolês</a></li>
+                    <li><a href="">Categorias</a></li>
+                    <li><a href="">Usúarios</a></li>
+                    <li><a href="">Parceiros</a></li>
+                    <li><a href="">Dashboard</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
 
 </body>
 
