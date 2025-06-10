@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Criar Rolê</title>
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 300;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #574AE2;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .font-bold {
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body class="bg-[#1A1423] text-[#fff]">
+    <nav class="px-8 py-4">
+        <div class="flex justify-between items-center">
+            <!-- Logo + Links (esquerda) -->
+            <div class="flex items-center space-x-8">
+                <a href="" class="text-white text-lg font-bold">I a Boa?</a>
+
+                <!-- Links principais -->
+                <div class="hidden md:flex space-x-4">
+                    <a href="../index.html" class="nav-link text-white px-3 py-2">Página Inicial</a>
+                    <a href="../pages/sobre.html" class="nav-link text-white px-3 py-2">Sobre o Projeto</a>
+                    <a href="../pages/desenvolvedores.html" class="nav-link text-white px-3 py-2">Desenvolvedores</a>
+                </div>
+            </div>
+
+            <!-- Botões (direita) -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="../pages/autenticacao/cadastrar-usuario.html"
+                    class="text-white hover:text-[#574AE2] border border-white hover:border-[#574AE2] px-4 py-2 rounded transition-all">Cadastre-se</a>
+                <a href="../pages//autenticacao//entrar.html"
+                    class="text-white bg-[#574AE2] hover:bg-[#3A2EC1] px-6 py-2 rounded transition-all mr-4">Entre</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Voltar para página anterior -->
+    <span>
+        <a href="">
+            <i></i>
+            <p>Voltar</p>
+        </a>
+    </span>
+
+    <main>
+        <!-- Conteudo principal -->
+        <div>
+            <!-- Titulo da página -->
+            <div>
+                <h1>Cadastrar Rolê</h1>
+                <p>Crie o proximo rolê queridinho da cidade</p>
+            </div>
+
+            <!-- Imagem do rolê -->
+            <div>
+                <img src="" alt="">
+                <input type="" id="carregar-img" placeholder="Faça o upload de uma foto">
+            </div>
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="border" colspan="all"><input type="text" id="role-nome" placeholder="Digite o nome do rolê"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="border"><input type="date" id="role-data" placeholder="Selecione uma data"></td>
+                        <td class="border"><input type="time" id="role-hora" placeholder="Selecione um horário"></td>
+                        <td class="border"><input type="text" id="role-categoria" placeholder="Selecione as categorias desse rolê"><i></i></td>
+                    </tr>
+
+                    <tr>
+                        <td class="border"><input type="text" id="role-local" placeholder="Digite o local do rolê (ex: Sweet Garden, Confiança Eventos..)"></td>
+                    </tr>
+
+                    <tr>
+                        <td>                    
+                            <input type="checkbox" id="btn-selecionar">
+                            <label for="btn-selecionar">Ultilizar meu nome fantasia</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="border"><input type="text" id="loc" placeholder="Digite a localização"></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="loc-checkbox">
+                            <label for="loc-checkbox">Ultilizar minha ultima localização</label>
+                        </td>
+                    </tr>
+                </tbody> 
+            </table>
+
+            
+
+        </div>
+    </main>
+
+
+    
+</body>
+</html>
