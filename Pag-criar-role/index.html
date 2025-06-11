@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+        rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Criar Rolê</title>
     <style>
@@ -74,61 +75,144 @@
 
     <main>
         <!-- Conteudo principal -->
-        <div>
+        <div class="w-6xl flex justify-center items-center">
             <!-- Titulo da página -->
-            <div>
-                <h1>Cadastrar Rolê</h1>
+            <div class="self-center">
+                <h1 class="self-center font-semibold">Cadastrar Rolê</h1>
                 <p>Crie o proximo rolê queridinho da cidade</p>
             </div>
 
             <!-- Imagem do rolê -->
             <div>
-                <img src="" alt="">
-                <input type="" id="carregar-img" placeholder="Faça o upload de uma foto">
+                <img src="https://picsum.photos/200/200" alt="">
+                <div class="border">
+                    <input type="file" accept="Imagem/*" id="carregar-img" placeholder="Faça o upload de uma foto">
+                    <i class="fas fa-upload"></i>
+                </div>
             </div>
 
-            <table>
-                <tbody>
-                    <tr>
-                        <td class="border" colspan="all"><input type="text" id="role-nome" placeholder="Digite o nome do rolê"></td>
-                    </tr>
+            <!-- Tabela e botões  -->
+            <div>
+                <table class="">
+                    <!-- Tabelas de nome, data, hora e local -->
+                    <tbody>
+                        <tr>
+                            <td class="border" colspan="3"><input class="w-full" type="text" id="role-nome"
+                                    placeholder="Digite o nome do rolê"></td>
+                        </tr>
 
-                    <tr>
-                        <td class="border"><input type="date" id="role-data" placeholder="Selecione uma data"></td>
-                        <td class="border"><input type="time" id="role-hora" placeholder="Selecione um horário"></td>
-                        <td class="border"><input type="text" id="role-categoria" placeholder="Selecione as categorias desse rolê"><i></i></td>
-                    </tr>
+                        <tr>
+                            <td class="border"><input type="date" id="role-data" placeholder="Selecione uma data"></td>
+                            <td class="border"><input type="time" id="role-hora" placeholder="Selecione um horário">
+                            </td>
+                            <td class="border"><input type="text" id="role-categoria"
+                                    placeholder="Selecione as categorias desse rolê"><i></i></td>
+                        </tr>
 
-                    <tr>
-                        <td class="border"><input type="text" id="role-local" placeholder="Digite o local do rolê (ex: Sweet Garden, Confiança Eventos..)"></td>
-                    </tr>
+                        <tr>
+                            <td class="border" colspan="3"><input class="w-full" type="text" id="role-local"
+                                    placeholder="Digite o local do rolê (ex: Sweet Garden, Confiança Eventos..)"></td>
+                        </tr>
 
-                    <tr>
-                        <td>                    
-                            <input type="checkbox" id="btn-selecionar">
-                            <label for="btn-selecionar">Ultilizar meu nome fantasia</label>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="btn-selecionar">
+                                <label for="btn-selecionar">Ultilizar meu nome fantasia</label>
+                            </td>
+                        </tr>
 
-                    <tr>
-                        <td class="border"><input type="text" id="loc" placeholder="Digite a localização"></td>
-                    </tr>
+                        <tr>
+                            <td class="border" colspan="3"><input class="w-full" type="text" id="loc"
+                                    placeholder="Digite a localização"></td>
+                        </tr>
 
-                    <tr>
-                        <td>
-                            <input type="checkbox" id="loc-checkbox">
-                            <label for="loc-checkbox">Ultilizar minha ultima localização</label>
-                        </td>
-                    </tr>
-                </tbody> 
-            </table>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="loc-checkbox">
+                                <label for="loc-checkbox">Ultilizar minha ultima localização</label>
+                            </td>
+                        </tr>
+                    </tbody>
 
-            
+                    <!-- Tabelas de preços -->
+                    <tbody>
+                        <tr>
+                            <td class="border">
+                                <label for="entrada">Entrada</label>
+                                <input type="number" id="entrada">
+                                <i class="fas fa-dollar-sign"></i>
+                            </td>
+
+                            <td class="border">
+                                <input type="number" id="entrada-preco">
+                                <i class="fas fa-dollar-sign"></i>
+                            </td>
+                            <td class="border">
+                                <input type="text" id="obs-preco" placeholder="Observações">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="border">
+                                <label for="bebidas">Bebidas</label>
+                                <input type="number" id="bebidas">
+                                <i class="fas fa-dollar-sign"></i>
+                            </td>
+
+                            <td class="border">
+                                <input type="number" id="bebidas-preco">
+                                <i class="fas fa-dollar-sign"></i>
+                            </td>
+                            <td class="border">
+                                <input type="text" id="obs-bebida" placeholder="Observações">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="border">
+                                <label for="comidas">Comidas</label>
+                                <input type="number" id="comidas">
+                                <i class="fas fa-dollar-sign"></i>
+                            </td>
+
+                            <td class="border">
+                                <input type="number" id="comidas-preco">
+                                <i class="fas fa-dollar-sign"></i>
+                            </td>
+                            <td class="border">
+                                <input type="text" id="obs-comida" placeholder="Observações">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="border" colspan="3">
+                                <input class="w-full" type="text" id="obs-role"
+                                    placeholder="Adicione informações extras (ex: Proibido menores de 18 anos)">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- Botões de salvar e cancelar  -->
+                <div>
+                    <!-- Botão de cancelar -->
+                    <div class="border">
+                        <p>Cancelar</p>
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <!-- Botão de salvar -->
+                    <div class="bg-[#80FF91] text-[#000]">
+                        <p>Salvar</p>
+                        <i class="fas fa-check"></i>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
     </main>
 
 
-    
+
 </body>
+
 </html>
