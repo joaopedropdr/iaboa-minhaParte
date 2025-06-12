@@ -74,145 +74,126 @@
     <main>
         <!-- Conteudo principal -->
         <div class="flex flex-col justify-center items-center">
+            <!-- Tabela, imagem e botões  -->
+            <div class="flex w-6xl">
+                <!-- Imagem, data, hora e categoria -->
+                <!-- Imagem do rolê -->
+                <div class="border w-[200px] h-10 mr-2 self-end">
+                    <input class="cursor-pointer" type="text" accept="Imagem/*" id="carregar-img"
+                        placeholder="Faça o upload de uma foto">
+                    <i class="fas fa-upload"></i>
+                </div>
 
-            <div class="flex">
-                <!-- Tabela, imagem e botões  -->
-                <table class="w-6xl h-[300px] gap-5 border-separate border-spacing-[10px]">
-                    <div>
-                        <!-- Imagem do rolê -->
-                        <div class="border w-[200px]">
-                            <input class="cursor-pointer" type="file" accept="Imagem/*" id="carregar-img" placeholder="Faça o upload de uma foto">
-                            <i class="fas fa-upload"></i>
+                <div>
+                    <!-- Tabelas de nome, data, hora e local -->
+                    <div class="flex flex-col w-full">
+                        <input class="border h-10 w-full outline-none p-2" type="text" id="role-nome"
+                            placeholder="Digite o nome do rolê">
+                        <!-- Hora, data e categoria  -->
+                        <ul class="flex mt-2 gap-3">
+                            <li>
+                                <input class="border outline-none h-10 p-2" type="date" id="role-data"
+                                    placeholder="Selecione uma data">
+                            </li>
+                            <li class="w-[165px]">
+                                <input class="border outline-none h-10 p-2 w-full" type="time" id="role-hora"
+                                    placeholder="Selecione um horário">
+                            </li>
+                            <li class=>
+                                <div class="flex border w-full">
+                                    <input class=" outline-none h-10 w-full p-2" type="text" id="role-categoria"
+                                        placeholder="Selecione as categorias desse rolê">
+                                    <i class="pr-2 self-center fa-solid fa-angle-down"></i>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <!-- localização -->
+                    <div class="flex flex-col mt-2">
+                        <input class=" outline-nonew-full border h-10 p-2" type="text" id="role-local"
+                            placeholder="Digite o local do rolê (ex: Sweet Garden, Confiança Eventos..)">
+
+                        <div>
+                            <input type="checkbox" id="btn-selecionar">
+                            <label for="btn-selecionar">Ultilizar meu nome fantasia</label>
                         </div>
 
-                        <!-- Tabelas de nome, data, hora e local -->
-                        <tbody class="">
-                            <tr>
-                                <td colspan="3">
-                                    <input class="border h-10 w-full outline-none" type="text" id="role-nome" placeholder="Digite o nome do rolê">
-                                </td>
-                            </tr>
+                        <input class="border outline-none w-full h-10 p-2 mt-2" type="text" id="loc"
+                            placeholder="Digite a localização">
 
-                            <!-- Hora, data e categoria  -->
-                            <tr class="flex gap-5">
-                                <td>
-                                   <input class="border outline-none h-10 p-2" type="date" id="role-data" placeholder="Selecione uma data">
-                                </td>
-                                <td>
-                                    <input class="border outline-none h-10 w-full p-2" type="time" id="role-hora" placeholder="Selecione um horário">
-                                </td>
-                                <td>
-                                    <div class="flex border">
-                                        <input class=" outline-none h-10 w-full p-2" type="text" id="role-categoria" placeholder="Selecione as categorias desse rolê">
-                                        <i class="pr-2 self-center fa-solid fa-angle-down"></i>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-
-                        <tbody>
-                            <!-- localização -->
-                            <tr class="flex flex-col w-full">
-                                <td colspan="3">
-                                    <input class=" outline-nonew-full border h-10 p-2" type="text" id="role-local"
-                                        placeholder="Digite o local do rolê (ex: Sweet Garden, Confiança Eventos..)">
-                                </td>
-
-                                <td>
-                                    <input type="checkbox" id="btn-selecionar">
-                                    <label for="btn-selecionar">Ultilizar meu nome fantasia</label>
-                                </td>
-                            </tr>
-
-                            <tr class="flex flex-col w-full mt-2">
-                                <td colspan="3">
-                                    <input class="border outline-none w-full h-10 p-2" type="text" id="loc"
-                                        placeholder="Digite a localização">
-                                </td>
-
-                                <td>
-                                    <input type="checkbox" id="loc-checkbox">
-                                    <label for="loc-checkbox">Ultilizar minha ultima localização</label>
-                                </td>
-                            </tr>
-                        </tbody>
+                        <div>
+                            <input type="checkbox" id="loc-checkbox">
+                            <label for="loc-checkbox">Ultilizar minha ultima localização</label>
+                        </div>
                     </div>
-                </table>
-           </div>
 
-                <!-- Tabelas de preços -->
-                <table class="">
-                    <tbody>
-                        <!-- Preço da entrada -->
-                        <tr class="h-[140px]">
-                            <td>
-                                <div class="p-3">
-                                    <label for="entrada">Entrada</label>
-                                    <div class="flex h-10 gap-3">
-                                        <div class="flex border">
-                                            <input class="p-2 outline-none" type="number" id="entrada" placeholder="Maior preço">
-                                            <i class="pr-2 self-center fas fa-dollar-sign"></i>
-                                        </div>
+                </div>
 
-                                        <div class="flex border">
-                                            <input class="p-2 outline-none" type="number" id="entrada-preco" placeholder="Menor preço">
-                                            <i class="pr-2 self-center fas fa-dollar-sign"></i>
-                                        </div>
-                                    </div>
-                                    <input class="p-2 outline-none border w-full mt-3 h-10" type="text" id="obs-preco"
-                                        placeholder="Observações">
-                                </div>
-                            </td>
-                            <!-- Preço das bebidas  -->
-                            <td>
-                                <div class="p-3">
-                                    <label for="bebida">Bebidas</label>
-                                    <div class="flex h-10 gap-3">
-                                        <div class="flex border">
-                                            <input class="p-2 outline-none" type="number" id="bebida" placeholder="Maior preço">
-                                            <i class="pr-2 self-center fas fa-dollar-sign"></i>
-                                        </div>
+            </div>
+            <!-- Tabelas de preços -->
+            <!-- Preço da entrada -->
+            <div class="flex justify-center items-center w-6xl">
+                <div class="p-3 w-full">
+                    <label for="entrada">Entrada</label>
+                    <div class="flex h-10 gap-3">
+                        <div class="flex border">
+                            <input class="p-2 outline-none" type="number" id="entrada" placeholder="Maior preço">
+                            <i class="pr-2 self-center fas fa-dollar-sign"></i>
+                        </div>
 
-                                        <div class="flex border">
-                                            <input class="p-2 outline-none" type="number" id="bebida-preco" placeholder="Menor preço">
-                                            <i class="pr-2 self-center fas fa-dollar-sign"></i>
-                                        </div>
-                                    </div>
-                                    <input class="p-2 outline-none border w-full mt-3 h-10" type="text" id="obs-bebida" placeholder="Observações">
-                                </div>
-                            </td>
-                            <!-- Preço das comidas  -->
-                            <td>
-                                <div class="p-3">
-                                    <label for="comidas">Comidas</label>
-                                    <div class="flex gap-3 h-10">
-                                        <div class="flex border">
-                                            <input class="p-2 outline-none" type="number" id="comidas" placeholder="Maior preço">
-                                            <i class="pr-2 self-center fas fa-dollar-sign"></i>
-                                        </div>
+                        <div class="flex border">
+                            <input class="p-2 outline-none" type="number" id="entrada-preco" placeholder="Menor preço">
+                            <i class="pr-2 self-center fas fa-dollar-sign"></i>
+                        </div>
+                    </div>
+                    <input class="p-2 outline-none border w-full mt-3 h-10" type="text" id="obs-preco"
+                        placeholder="Observações">
+                </div>
+                <!-- Preço das bebidas  -->
+                <div class=" w-full">
+                    <label for="bebida">Bebidas</label>
+                    <div class="flex h-10 gap-3">
+                        <div class="flex border">
+                            <input class="p-2 outline-none" type="number" id="bebida" placeholder="Maior preço">
+                            <i class="pr-2 self-center fas fa-dollar-sign"></i>
+                        </div>
 
-                                        <div class="flex border">
-                                            <input class="p-2 outline-none" type="number" id="comidas-preco" placeholder="Menor preço">
-                                            <i class="pr-2 self-center fas fa-dollar-sign"></i>
-                                        </div>
-                                    </div>
-                                    <input class="p-2 outline-none border w-full mt-3 h-10" type="text" id="obs-comida"
-                                        placeholder="Observações">
-                                </div>
-                            </td>
-                        </tr>
+                        <div class="flex border">
+                            <input class="p-2 outline-none" type="number" id="bebida-preco" placeholder="Menor preço">
+                            <i class="pr-2 self-center fas fa-dollar-sign"></i>
+                        </div>
+                    </div>
+                    <input class="p-2 outline-none border w-full mt-3 h-10" type="text" id="obs-bebida"
+                        placeholder="Observações">
+                </div>
 
-                        <tr>
-                            <td class="h-10 p-3" colspan="3">
-                                <input class="p-2 outline-none border w-full h-10" type="text"
-                                    placeholder="Adicione informações extras relevantes (ex: Proibido para menores de 18 anos)">
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <!-- Preço das comidas  -->
+                <div class="p-3 w-full">
+                    <label for="comidas">Comidas</label>
+                    <div class="flex gap-3 h-10">
+                        <div class="flex border">
+                            <input class="p-2 outline-none" type="number" id="comidas" placeholder="Maior preço">
+                            <i class="pr-2 self-center fas fa-dollar-sign"></i>
+                        </div>
+
+                        <div class="flex border">
+                            <input class="p-2 outline-none" type="number" id="comidas-preco" placeholder="Menor preço">
+                            <i class="pr-2 self-center fas fa-dollar-sign"></i>
+                        </div>
+                    </div>
+                    <input class="p-2 outline-none border w-full mt-3 h-10" type="text" id="obs-comida"
+                        placeholder="Observações">
+                </div>
+            </div>
+            <input class="p-2 outline-none border w-6xl h-10" type="text"
+                placeholder="Adicione informações extras relevantes (ex: Proibido para menores de 18 anos)">
+
+
 
             <!-- Botões de salvar e cancelar  -->
-            <div class="flex gap-5">
+            <div class="flex gap-5 mt-3">
                 <!-- Botão de cancelar -->
                 <div class="flex rounded-full px-5 py-2 border">
                     <p>Cancelar</p>
@@ -224,7 +205,6 @@
                     <i class="self-center pl-2 fas fa-check"></i>
                 </div>
             </div>
-
         </div>
     </main>
 
