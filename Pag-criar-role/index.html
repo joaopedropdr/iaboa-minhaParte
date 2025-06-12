@@ -66,150 +66,150 @@
     </nav>
 
     <!-- Titulo da página -->
-    <div class="flex flex-col">
-        <h1 class="self-center font-semibold">Cadastrar Rolê</h1>
+    <div class="flex flex-col mb-10">
+        <h1 class="self-center font-semibold text-2xl">Cadastrar Rolê</h1>
         <p class="self-center">Crie o proximo rolê queridinho da cidade</p>
     </div>
 
-    <main>
+    <main class="min-h-screen flex flex-col items-center">
         <!-- Conteudo principal -->
-        <div class="flex flex-col justify-center items-center">
-            <!-- Tabela, imagem e botões  -->
-            <div class="flex w-6xl">
-                <!-- Imagem, data, hora e categoria -->
+        <div class="flex flex-col justify-center items-center w-full max-w-[1150px]">
+            <!-- Tabela e imagem  -->
+            <div class="flex w-full">
                 <!-- Imagem do rolê -->
-                <div class="border w-[200px] h-10 mr-2 self-end">
-                    <input class="cursor-pointer" type="text" accept="Imagem/*" id="carregar-img"
+                <div class="border w-[200px] h-10 mr-2 self-end flex items-center p-2">
+                    <input class="cursor-pointer w-full outline-none" type="text" accept="Imagem/*" id="carregar-img"
                         placeholder="Faça o upload de uma foto">
-                    <i class="fas fa-upload"></i>
+                    <i class="fas fa-upload ml-2"></i>
                 </div>
 
-                <div>
-                    <!-- Tabelas de nome, data, hora e local -->
-                    <div class="flex flex-col w-full">
-                        <input class="border h-10 w-full outline-none p-2" type="text" id="role-nome"
-                            placeholder="Digite o nome do rolê">
-                        <!-- Hora, data e categoria  -->
-                        <ul class="flex mt-2 gap-3">
-                            <li>
-                                <input class="border outline-none h-10 p-2" type="date" id="role-data"
-                                    placeholder="Selecione uma data">
-                            </li>
-                            <li class="w-[165px]">
-                                <input class="border outline-none h-10 p-2 w-full" type="time" id="role-hora"
-                                    placeholder="Selecione um horário">
-                            </li>
-                            <li class=>
-                                <div class="flex border w-full">
-                                    <input class=" outline-none h-10 w-full p-2" type="text" id="role-categoria"
-                                        placeholder="Selecione as categorias desse rolê">
-                                    <i class="pr-2 self-center fa-solid fa-angle-down"></i>
-                                </div>
-                            </li>
-                        </ul>
-
-                    </div>
-
-                    <!-- localização -->
-                    <div class="flex flex-col mt-2">
-                        <input class=" outline-nonew-full border h-10 p-2" type="text" id="role-local"
-                            placeholder="Digite o local do rolê (ex: Sweet Garden, Confiança Eventos..)">
-
-                        <div>
-                            <input type="checkbox" id="btn-selecionar">
-                            <label for="btn-selecionar">Ultilizar meu nome fantasia</label>
+                <form action="../Pag-criar-role/index.html" class="w-full">
+                    <div class="w-full">
+                        <!-- Tabelas de nome, data, hora e local -->
+                        <div class="flex flex-col w-full">
+                            <input class="border h-10 w-full outline-none p-2" type="text" id="role-nome"
+                                placeholder="Digite o nome do rolê">
+                            <!-- Hora, data e categoria  -->
+                            <ul class="flex mt-2 gap-3 w-full">
+                                <li class="flex-1">
+                                    <input class="border outline-none h-10 p-2 w-full" type="date" id="role-data"
+                                        placeholder="Selecione uma data">
+                                </li>
+                                <li class="flex-1 max-w-[165px]">
+                                    <input class="border outline-none h-10 p-2 w-full" type="time" id="role-hora"
+                                        placeholder="Selecione um horário">
+                                </li>
+                                <li class="flex-1">
+                                    <div class="flex border w-full h-10">
+                                        <input class="outline-none p-2 w-full" type="text" id="role-categoria"
+                                            placeholder="Selecione as categorias desse rolê">
+                                        <i class="pr-2 self-center fa-solid fa-angle-down"></i>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
 
-                        <input class="border outline-none w-full h-10 p-2 mt-2" type="text" id="loc"
-                            placeholder="Digite a localização">
+                        <!-- localização -->
+                        <div class="flex flex-col mt-2 w-full">
+                            <input class="outline-none border h-10 p-2 w-full" type="text" id="role-local"
+                                placeholder="Digite o local do rolê (ex: Sweet Garden, Confiança Eventos..)">
 
-                        <div>
-                            <input type="checkbox" id="loc-checkbox">
-                            <label for="loc-checkbox">Ultilizar minha ultima localização</label>
+                            <div class="mt-2">
+                                <input type="checkbox" id="btn-selecionar">
+                                <label for="btn-selecionar">Utilizar meu nome fantasia</label>
+                            </div>
+
+                            <input class="border outline-none w-full h-10 p-2 mt-2" type="text" id="loc"
+                                placeholder="Digite a localização">
+
+                            <div class="mt-2">
+                                <input type="checkbox" id="loc-checkbox">
+                                <label for="loc-checkbox">Utilizar minha última localização</label>
+                            </div>
                         </div>
                     </div>
-
-                </div>
-
+                </form>
             </div>
             <!-- Tabelas de preços -->
-            <!-- Preço da entrada -->
-            <div class="flex justify-center items-center w-6xl">
-                <div class="p-3 w-full">
-                    <label for="entrada">Entrada</label>
-                    <div class="flex h-10 gap-3">
-                        <div class="flex border">
-                            <input class="p-2 outline-none" type="number" id="entrada" placeholder="Maior preço">
-                            <i class="pr-2 self-center fas fa-dollar-sign"></i>
-                        </div>
+            <form action="../Pag-criar-role/index.html" class="w-full">
+                <!-- Tabelas de preços -->
+                <div class="flex justify-between items-center w-full mt-4 gap-4">
+                    <!-- Preço da entrada -->
+                    <div class="flex-1">
+                        <label for="entrada">Entrada</label>
+                        <div class="flex h-10 gap-3 mt-1">
+                            <div class="flex border flex-1">
+                                <input class="p-2 outline-none w-full" type="number" id="entrada"
+                                    placeholder="Maior preço">
+                                <i class="pr-2 self-center fas fa-dollar-sign"></i>
+                            </div>
 
-                        <div class="flex border">
-                            <input class="p-2 outline-none" type="number" id="entrada-preco" placeholder="Menor preço">
-                            <i class="pr-2 self-center fas fa-dollar-sign"></i>
+                            <div class="flex border flex-1">
+                                <input class="p-2 outline-none w-full" type="number" id="entrada-preco"
+                                    placeholder="Menor preço">
+                                <i class="pr-2 self-center fas fa-dollar-sign"></i>
+                            </div>
                         </div>
+                        <input class="p-2 outline-none border w-full mt-3 h-10" type="text" id="obs-preco"
+                            placeholder="Observações">
                     </div>
-                    <input class="p-2 outline-none border w-full mt-3 h-10" type="text" id="obs-preco"
-                        placeholder="Observações">
-                </div>
-                <!-- Preço das bebidas  -->
-                <div class=" w-full">
-                    <label for="bebida">Bebidas</label>
-                    <div class="flex h-10 gap-3">
-                        <div class="flex border">
-                            <input class="p-2 outline-none" type="number" id="bebida" placeholder="Maior preço">
-                            <i class="pr-2 self-center fas fa-dollar-sign"></i>
-                        </div>
+                    <!-- Preço das bebidas  -->
+                    <div class="flex-1">
+                        <label for="bebida">Bebidas</label>
+                        <div class="flex h-10 gap-3 mt-1">
+                            <div class="flex border flex-1">
+                                <input class="p-2 outline-none w-full" type="number" id="bebida"
+                                    placeholder="Maior preço">
+                                <i class="pr-2 self-center fas fa-dollar-sign"></i>
+                            </div>
 
-                        <div class="flex border">
-                            <input class="p-2 outline-none" type="number" id="bebida-preco" placeholder="Menor preço">
-                            <i class="pr-2 self-center fas fa-dollar-sign"></i>
+                            <div class="flex border flex-1">
+                                <input class="p-2 outline-none w-full" type="number" id="bebida-preco"
+                                    placeholder="Menor preço">
+                                <i class="pr-2 self-center fas fa-dollar-sign"></i>
+                            </div>
                         </div>
+                        <input class="p-2 outline-none border w-full mt-3 h-10" type="text" id="obs-bebida"
+                            placeholder="Observações">
                     </div>
-                    <input class="p-2 outline-none border w-full mt-3 h-10" type="text" id="obs-bebida"
-                        placeholder="Observações">
-                </div>
 
-                <!-- Preço das comidas  -->
-                <div class="p-3 w-full">
-                    <label for="comidas">Comidas</label>
-                    <div class="flex gap-3 h-10">
-                        <div class="flex border">
-                            <input class="p-2 outline-none" type="number" id="comidas" placeholder="Maior preço">
-                            <i class="pr-2 self-center fas fa-dollar-sign"></i>
-                        </div>
+                    <!-- Preço das comidas  -->
+                    <div class="flex-1">
+                        <label for="comidas">Comidas</label>
+                        <div class="flex gap-3 h-10 mt-1">
+                            <div class="flex border flex-1">
+                                <input class="p-2 outline-none w-full" type="number" id="comidas"
+                                    placeholder="Maior preço">
+                                <i class="pr-2 self-center fas fa-dollar-sign"></i>
+                            </div>
 
-                        <div class="flex border">
-                            <input class="p-2 outline-none" type="number" id="comidas-preco" placeholder="Menor preço">
-                            <i class="pr-2 self-center fas fa-dollar-sign"></i>
+                            <div class="flex border flex-1">
+                                <input class="p-2 outline-none w-full" type="number" id="comidas-preco"
+                                    placeholder="Menor preço">
+                                <i class="pr-2 self-center fas fa-dollar-sign"></i>
+                            </div>
                         </div>
+                        <input class="p-2 outline-none border w-full mt-3 h-10" type="text" id="obs-comida"
+                            placeholder="Observações">
                     </div>
-                    <input class="p-2 outline-none border w-full mt-3 h-10" type="text" id="obs-comida"
-                        placeholder="Observações">
                 </div>
+                <input class="p-2 outline-none border w-full mt-4 h-10" type="text"
+                    placeholder="Adicione informações extras relevantes (ex: Proibido para menores de 18 anos)">
+            </form>
+        </div>
+        <!-- Botões de salvar e cancelar  -->
+        <div class="flex gap-5 mt-6 w-full justify-center">
+            <!-- Botão de cancelar -->
+            <div class="flex rounded-full px-5 py-2 border cursor-pointer">
+                <p>Cancelar</p>
+                <i class="self-center pl-2 fas fa-times"></i>
             </div>
-            <input class="p-2 outline-none border w-6xl h-10" type="text"
-                placeholder="Adicione informações extras relevantes (ex: Proibido para menores de 18 anos)">
-
-
-
-            <!-- Botões de salvar e cancelar  -->
-            <div class="flex gap-5 mt-3">
-                <!-- Botão de cancelar -->
-                <div class="flex rounded-full px-5 py-2 border">
-                    <p>Cancelar</p>
-                    <i class="self-center pl-2 fas fa-times"></i>
-                </div>
-                <!-- Botão de salvar -->
-                <div class="flex rounded-full px-5 py-2 bg-[#80FF91] text-[#000]">
-                    <p>Salvar</p>
-                    <i class="self-center pl-2 fas fa-check"></i>
-                </div>
+            <!-- Botão de salvar -->
+            <div class="flex rounded-full px-5 py-2 bg-[#80FF91] text-[#000] cursor-pointer">
+                <p>Salvar</p>
+                <i class="self-center pl-2 fas fa-check"></i>
             </div>
         </div>
     </main>
-
-
-
-</body>
 
 </html>
